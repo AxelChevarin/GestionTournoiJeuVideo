@@ -4,8 +4,17 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.3.0" />
+    <PackageReference Include="Microsoft.AspNet.EntityDataSource" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.1" />
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="3.0.0" />
+  </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Migrations\201911290020373_FirstM.resx">
+      <DependentUpon>201911290020373_FirstM.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

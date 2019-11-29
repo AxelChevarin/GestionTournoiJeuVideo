@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebApplication1.Models.Tournoi>
+
+@{
+
+    ViewData["Title"] = "Tournois";
+}
+
+<h1>Tournois</h1>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+
+        <th>
+           Jeu
+        </th>
+        <th>
+            Prix
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Description
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Jeu)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Prix)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Date)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+
+</tr>
+    }
+
+</table>

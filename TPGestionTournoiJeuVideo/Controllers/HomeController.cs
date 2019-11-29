@@ -22,7 +22,14 @@ namespace TPGestionTournoiJeuVideo.Controllers
         {
             return View();
         }
+          public IActionResult Tournois()
+        {
+            var db = new ContextClass();
+            var t = db.Tournois;
 
+            return View(t.ToList());
+      
+        }
         public IActionResult Privacy()
         {
             return View();
